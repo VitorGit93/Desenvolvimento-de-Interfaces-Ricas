@@ -5,7 +5,6 @@
     font-family: sans-serif;
 }
 
-
 body>header {
     /* Filho direto */
     width: 100%;
@@ -23,6 +22,7 @@ body>header {
     gap: 20px;
 }
 
+
 .logotipo img {
     height: 50px;
 }
@@ -33,14 +33,61 @@ body>header {
     text-decoration: none;
     text-transform: uppercase;
 }
+.banner {
+    position: relative;
+}
 
 .banner img {
     width: 100%;
 }
 
+.tituloBanner {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    justify-content: center;
+    align-items: center;
+    border-style: solid;
+    border-color: rgb(39, 12, 194);
+}
+
+.tituloBanner h1 {
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.tituloBanner a {
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+    background-color: #C86C2D;
+    margin-top: 20PX;
+    padding: 15px;
+    border: solid 2px white;
+    border-radius: 5px;
+}
+
 .nossosJogos {
     background-image: url('../img/bg-nossos-jogos.jpg');
     padding: 100px;
+}
+
+.nossosJogos h2 {
+    color: white;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.nossosJogos .artigos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
 }
 
 .artigos {
