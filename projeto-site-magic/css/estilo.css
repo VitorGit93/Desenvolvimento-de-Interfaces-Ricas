@@ -33,8 +33,11 @@ body>header {
     text-decoration: none;
     text-transform: uppercase;
 }
+
 .banner {
+    display: flex;
     position: relative;
+    align-items: center;
 }
 
 .banner img {
@@ -48,8 +51,7 @@ body>header {
     width: 500px;
     justify-content: center;
     align-items: center;
-    border-style: solid;
-    border-color: rgb(39, 12, 194);
+    left: 0;
 }
 
 .tituloBanner h1 {
@@ -71,15 +73,27 @@ body>header {
     border-radius: 5px;
 }
 
+.tituloBanner img {
+    width: 100%;
+}
+
 .nossosJogos {
+    width: 100%;
     background-image: url('../img/bg-nossos-jogos.jpg');
     padding: 100px;
 }
 
-.nossosJogos h2 {
-    color: white;
+.nossosJogos h1 {
+    color: black;
     text-align: center;
-    margin-bottom: 50px;
+    font-size: 40px;
+    margin-bottom: 40px;
+}
+
+.nossosJogos h2 {
+    color: black;
+    text-align: center;
+    margin-bottom: 30px;
 }
 
 .nossosJogos .artigos {
@@ -92,8 +106,29 @@ body>header {
 
 .artigos {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
     width: 100%;
+}
+
+.artigos article {
+    display: flex;
+    width: 300px;
+    height: 400px;
+    background-color: white;
+    flex-direction: column;
+    align-items: center;
+}
+
+.artigos article h2 {
+    padding-top: 30px;
+}
+
+.artigos article p {
+    text-align: center;
+    padding: 0 15px 0 15px;
+}
+
+.artigos article a {
+    text-decoration: none;
+    color: ;
+    padding-top: 40px;
 }
