@@ -5,13 +5,12 @@ function App() {
   return (
     <div id="App">
       <header>
-        <h1>Bem Vindo</h1>
+        <h1>Bem Vindo Veterano</h1>
       </header>
       <main>
         <div className="action-buttons">
-          <Button text="Login" />
-          <Button text="Cadastro" />
-          <Button text="" />
+          <Button text="Login" type='primary'/>
+          <Button text="Cadastro" type='default'/>
         </div>
       </main>
     </div>
