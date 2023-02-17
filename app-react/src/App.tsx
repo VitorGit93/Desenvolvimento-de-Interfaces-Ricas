@@ -1,11 +1,12 @@
 import './App.css'
 import { Button } from './components/Button'
+import { Title } from './components/Title'
 
 function App() {
   return (
     <div id="App">
       <header>
-        <h1>Bem Vindo Veterano</h1>
+        <Title text='Olá Veterano'/>
       </header>
       <main>
         <div className="action-buttons">
