@@ -1,9 +1,8 @@
 type TitleProps = {
-    text: string
+    text:string
 }
-
-export function Title(props:TitleProps) {
-    return (
-        <h1 className="title">{props.text}</h1>
+export function Title(props:TitleProps){
+    return(
+        <h1>{props.text}</h1>
     )
 }
