@@ -1,7 +1,9 @@
 import './ButtonStyle.css'
+
 type ButtonProps = {
     text:string,
     type:"default"|"primary"
+    
 }
 export function Button(props:ButtonProps){
     return(

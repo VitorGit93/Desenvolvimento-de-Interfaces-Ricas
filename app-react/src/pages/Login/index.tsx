@@ -14,7 +14,6 @@ export function Login() {
                     <input type="password" name="senha" placeholder="Senha" />
                     <Button text="Entrar" type="primary" />
                 </form>
-
             </main>
         </>
     )
