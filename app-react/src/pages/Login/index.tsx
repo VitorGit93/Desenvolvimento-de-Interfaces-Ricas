@@ -10,9 +10,9 @@ export function Login() {
 
             <main>
                 <form >
-                    <input type="email" name="email" placeholder="E-mail"/>
-                    <input type="password" name="senha" placeholder="Senha"/>
-                    <Button text="Entrar" type="primary"/>
+                    <input type="email" name="email" placeholder="E-mail" />
+                    <input type="password" name="senha" placeholder="Senha" />
+                    <Button text="Entrar" type="primary" />
                 </form>
 
             </main>
