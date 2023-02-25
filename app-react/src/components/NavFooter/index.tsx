@@ -2,9 +2,12 @@
 
 export function NavFooter() {
     return (
-        <footer>
+        <footer className="footer-control">
             <nav>
                 
+
+
+
             </nav>
         </footer>
     )
