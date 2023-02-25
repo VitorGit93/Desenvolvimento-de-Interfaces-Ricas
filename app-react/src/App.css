@@ -38,6 +38,7 @@ main{
   display: flex;
   justify-content: center;
   flex-direction: column;
+ 
   gap: 10px;
   width: 100%;
  
@@ -76,4 +77,15 @@ form input{
 }
 .navbar-menu a:hover{
     color: #764ba2;
+}
+
+.footer-nav{
+  width: 100%;
+  margin-top: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 1px solid darkslategrey;
+  padding: 5px;
+  
 }
