@@ -3,11 +3,11 @@ import { FiSearch, FiHome, FiMenu  } from 'react-icons/all';
 
 export function Footer() {
     return (
-        <footer className="footer-nav">
+        <footer className="navbar-menu">
 
-            <FiHome size={24} color='white'/>
-            <FiSearch size={24} color='white' />
-            <FiMenu size={24} color='white' />
+            <FiHome size={24} color='blue'/>
+            <FiSearch size={24} color='blue' />
+            <FiMenu size={24} color='blue' />
 
         </footer>
     )
