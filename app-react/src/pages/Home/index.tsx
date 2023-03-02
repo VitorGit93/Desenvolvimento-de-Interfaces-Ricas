@@ -1,5 +1,4 @@
 import { Button } from "../../components/Button";
-import { Footer } from "../../components/Footer";
 
 export function Home() {
     return (
@@ -10,7 +9,7 @@ export function Home() {
                     <Button text="Cadastro" type='default' />
                 </div>
             </main>
-            <Footer/>
+            
         </>
     )
 }
