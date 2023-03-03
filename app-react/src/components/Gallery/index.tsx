@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { movies } from "./data"
+import "./style.css";
 
 export function Gallery() {
     const [filmeNoAr, setfilmeNoAr] = useState(0);
@@ -23,8 +24,8 @@ export function Gallery() {
                 {movie && <img src={movie.images.poster} alt={movie.title} />}
             </section>
 
-            <button disabled={ePrimeiroFilme} className="action-buttons" onClick={irAnteriorFilme}>Anterior</button>
-            <button disabled={eUltimoFilme} className="action-buttons" onClick={irProximoFilme}>Próxima</button>
+            <button disabled={ePrimeiroFilme} className="btn-default" onClick={irAnteriorFilme}>Anterior</button>
+            <button disabled={eUltimoFilme} className="btn-default" onClick={irProximoFilme}>Próximo</button>
         </>
     )
 }
