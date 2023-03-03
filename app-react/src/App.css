@@ -38,7 +38,6 @@ main{
   display: flex;
   justify-content: center;
   flex-direction: column;
- 
   gap: 10px;
   width: 100%;
  
@@ -59,4 +58,3 @@ form input{
   border: 0;
   outline: none;
 }
-
