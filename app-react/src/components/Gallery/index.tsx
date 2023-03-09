@@ -19,7 +19,12 @@ export function Gallery() {
     }
 
     function irAnteriorFilme() {
-        setfilmeNoAr(filmeNoAr - 1);
+    
+        if(filmeNoAr === 0) {
+            setfilmeNoAr(movies.length - 1) 
+        } else {
+            setfilmeNoAr(filmeNoAr - 1)
+        }
     }
 
     // Adicionar verificação de limite para o índice filmeNoAr
