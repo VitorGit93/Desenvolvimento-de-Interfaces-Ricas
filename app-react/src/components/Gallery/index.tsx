@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { movies } from "./data"
-import "./style.css";
+//import "./style.css";
 
 export function Gallery() {
 
@@ -15,16 +15,24 @@ export function Gallery() {
     // Quando "irProximoFilme" é chamado, o valor de "filmeNoAr" é incrementado em 1, e quando "irAnteriorFilme" é chamado, é decrementado em 1.
 
     function irProximoFilme() {
-        setfilmeNoAr(filmeNoAr + 1);
+
+        if (filmeNoAr === movies.length - 1) {
+            setfilmeNoAr(0)
+        } else {
+            setfilmeNoAr(filmeNoAr + 1)
+        }
+
+
     }
 
     function irAnteriorFilme() {
-    
-        if(filmeNoAr === 0) {
-            setfilmeNoAr(movies.length - 1) 
+
+        if (filmeNoAr === 0) {
+            setfilmeNoAr(movies.length - 1)
         } else {
             setfilmeNoAr(filmeNoAr - 1)
         }
+
     }
 
     // Adicionar verificação de limite para o índice filmeNoAr
@@ -35,9 +43,9 @@ export function Gallery() {
     */
     const movie = movies.length > 0 ? movies[filmeNoAr] : null;
     console.log(movie)
-    const ePrimeiroFilme = filmeNoAr === 0;
+    const ePrimeiroFilme = filmeNoAr === 0 ? movies.length - 1 : false;
     console.log(ePrimeiroFilme)
-    const eUltimoFilme = filmeNoAr === movies.length - 1;
+    const eUltimoFilme = filmeNoAr === movies.length - 1 ?  0 : false;
     console.log(ePrimeiroFilme)
 
     /* Por fim, é retornado um snippet JSX que contém um elemento section para exibir a imagem do filme atual,
@@ -50,8 +58,8 @@ export function Gallery() {
                 {movie && <img src={movie.images.poster} alt={movie.title} />}
             </section>
 
-            <button disabled={ePrimeiroFilme} className="btn-default" onClick={irAnteriorFilme}>Anterior</button>
-            <button disabled={eUltimoFilme} className="btn-default" onClick={irProximoFilme}>Próximo</button>
+            <button className="btn-default" onClick={irAnteriorFilme}>Anterior</button>
+            <button className="btn-default" onClick={irProximoFilme}>Próximo</button>
         </>
     )
 }
