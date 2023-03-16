@@ -1,5 +1,6 @@
 import { House,User,Gear as Settings } from 'phosphor-react'
 import './style.css'
+
 export function NavBarMenu() {
     return (
         <>

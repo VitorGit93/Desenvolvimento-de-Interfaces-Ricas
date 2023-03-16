@@ -68,7 +68,7 @@ export function Gallery() {
  
   import { useState } from "react";
 import { movies } from "./data";
-import "./style.css";
+//import "./style.css";
 
 export function Gallery() {
   const [filmeNoAr, setfilmeNoAr] = useState(0);

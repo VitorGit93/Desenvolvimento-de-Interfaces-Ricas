@@ -1,6 +1,7 @@
 import { Menu } from "../../components/Menu";
 import { MenuItem } from "../../components/MenuItem";
 import { Title } from "../../components/Title";
+import { Link } from "react-router-dom"
 
 export function Home() {
     return (
@@ -13,8 +14,12 @@ export function Home() {
 
                 <Menu>
 
-                    <MenuItem/>
-                    <MenuItem/>
+                    <MenuItem icon={} text=""/>
+
+
+                    <Link to="/gallery">
+                        <MenuItem icon={} text="" />
+                    </Link>
                     
                 </Menu>
                 
