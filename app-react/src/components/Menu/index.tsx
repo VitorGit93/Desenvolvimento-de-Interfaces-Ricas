@@ -1,19 +1,16 @@
+import './style.css'
 
-export function Menu() {
+type MenuProps = {
+    children: React.ReactNode
+}
 
+export function Menu(props:MenuProps) {
+    
     return(
         <>
             <div className="menu">
-
-            
-
-
-
-
+                {props.children}
             </div>
-        
-        
         </>
     )
-
 }

@@ -1,16 +1,8 @@
 
-export function() {
-
+export function MenuItem() {
     return(
-
         <>
         
-        
-        
-        
         </>
-
-
     )
-
 }
