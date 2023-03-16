@@ -64,58 +64,7 @@ export function Gallery() {
     )
 }
 
-/*
- 
-  import { useState } from "react";
-import { movies } from "./data";
-//import "./style.css";
 
-export function Gallery() {
-  const [filmeNoAr, setfilmeNoAr] = useState(0);
-  const totalMovies = movies.length;
-
-  function irProximoFilme() {
-    if (filmeNoAr === totalMovies - 1) {
-      setfilmeNoAr(0);
-    } else {
-      setfilmeNoAr(filmeNoAr + 1);
-    }
-  }
-
-  function irAnteriorFilme() {
-    if (filmeNoAr === 0) {
-      setfilmeNoAr(totalMovies - 1);
-    } else {
-      setfilmeNoAr(filmeNoAr - 1);
-    }
-  }
-
-  function generateIndicators() {
-    let indicators = [];
-    for (let i = 0; i < totalMovies; i++) {
-      indicators.push(
-        <span
-          key={i}
-          className={`indicator ${i === filmeNoAr ? 'active' : ''}`}
-          onClick={() => setfilmeNoAr(i)}
-        ></span>
-      );
-    }
-    return indicators;
-  }
-
-  const movie = totalMovies > 0 ? movies[filmeNoAr] : null;
-
-  return (
-    <>
-      <section className="gallery">
-        {movie && <img src={movie.images.poster} alt={movie.title} />}
-      </section>
-      <div className="indicators
-
-
-
-*/
 
 
 
