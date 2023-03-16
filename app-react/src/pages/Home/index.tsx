@@ -7,10 +7,7 @@ export function Home() {
                 <Title text='Bem Vindo' />
             </header>
             <main>
-                <div className="action-buttons">
-                    <Button text="Login" type='primary'/>
-                    <Button text="Cadastro" type='default' />
-                </div>
+                
             </main>
         </>
     )

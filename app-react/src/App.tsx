@@ -8,8 +8,13 @@ import { StateExample } from './pages/StateExample'
 function App() {
   return (
     <div id="App">
-      
-      <Gallery />
+
+     
+     
+        <Home/>
+        <NavBarMenu/>
+     
+     
 
     </div>
   )
