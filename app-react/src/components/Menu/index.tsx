@@ -1,15 +1,13 @@
 import './style.css'
 
 type MenuProps = {
-    children: React.ReactNode
+    children:React.ReactNode
 }
-
-export function Menu(props:MenuProps) {
-    
-    return(
+export function Menu({children}:MenuProps){
+    return (
         <>
             <div className="menu">
-                {props.children}
+                {children}
             </div>
         </>
     )

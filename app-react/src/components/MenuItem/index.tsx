@@ -1,16 +1,15 @@
 
-
+import './style.css'
 type MenuItemProps = {
     icon: React.ReactNode
-    text: String
+    text: string
 }
-
-export function MenuItem({icon, text}:MenuItemProps) {
-    return(
+export function MenuItem({ icon, text }: MenuItemProps) {
+    return (
         <>
-            <a href="#" className="menuItem">
+            <button className="menuItem">
                 {icon}{text}
-            </a>
+            </button>
         </>
     )
 }
