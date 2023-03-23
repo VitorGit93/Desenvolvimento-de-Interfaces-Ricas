@@ -1,5 +1,7 @@
+import { ContactCard } from "../../components/ContactCard";
 import { ContactList } from "../../components/ContactList";
 import { Title } from "../../components/Title";
+
 export  function Contacts() {
     return (
         <>
