@@ -12,8 +12,3 @@
     justify-content: center;
     text-decoration: none;
 }
-
-.menuItem:visited{
-    text-decoration: none;
-    color: white;
-}
