@@ -1,10 +1,10 @@
 import { Box } from "@mui/material";
 
-type FooterLayoutProps = {
+type FooterProps = {
     children: React.ReactNode;
 };
 
-export function FooterLayout({ children }: FooterLayoutProps) {
+export function FooterLayout({ children }: FooterProps) {
     return (
         <Box
             sx={{

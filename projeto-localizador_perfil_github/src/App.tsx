@@ -2,7 +2,7 @@
 import { CssBaseline, Typography } from '@mui/material'
 import { Theme } from './theme/ThemeProvider'
 import { BaseLayout } from './layout/BaseLayout'
-import { FooterLayout } from './layout/FooterLayout'
+import { FooterLayout } from './components/Footer'
 
 
 function App() {
