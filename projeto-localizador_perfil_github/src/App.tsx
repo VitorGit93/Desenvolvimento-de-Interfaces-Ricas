@@ -1,14 +1,21 @@
 
+import { CssBaseline } from '@mui/material'
+import { Theme } from './theme/ThemeProvider'
+import { BaseLayout } from './layout/BaseLayout'
 import './App.css'
 
 function App() {
-  
+
 
   return (
-   <>
-   
-   
-   </>
+    <>
+      <Theme>
+        <CssBaseline />
+
+        <BaseLayout appBarTitle={'Buscador de Perfis'}>
+        </BaseLayout>
+      </Theme>
+    </>
   )
 }
 
