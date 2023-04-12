@@ -1,7 +1,8 @@
 
-import { CssBaseline } from '@mui/material'
+import { CssBaseline, Typography } from '@mui/material'
 import { Theme } from './theme/ThemeProvider'
 import { BaseLayout } from './layout/BaseLayout'
+import { FooterLayout } from './layout/FooterLayout'
 
 
 function App() {
@@ -14,6 +15,11 @@ function App() {
 
         <BaseLayout appBarTitle={'Buscador de Perfis'}>
         </BaseLayout>
+
+        <FooterLayout>
+          <Typography variant="body2">© My App 2022</Typography>
+        </FooterLayout>
+
       </Theme>
     </>
   )
