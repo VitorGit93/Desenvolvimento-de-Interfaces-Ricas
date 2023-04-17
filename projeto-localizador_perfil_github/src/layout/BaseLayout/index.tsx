@@ -1,4 +1,3 @@
-import { AppBar, Toolbar, Typography } from "@mui/material";
 import Box from "@mui/material/Box";
 import React from "react";
 import {CabecalhoHeader} from "../../components/CabecalhoHeader";
@@ -8,7 +7,7 @@ type BaseLayoutProps = {
     children: React.ReactNode;
     appBarTitle: string;
 };
-export function BaseLayout({ children, appBarTitle }: BaseLayoutProps) {
+export function BaseLayout({ children }: BaseLayoutProps) {
     return (
         <>
             <CabecalhoHeader/>
