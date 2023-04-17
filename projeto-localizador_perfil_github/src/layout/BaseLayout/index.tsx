@@ -9,7 +9,6 @@ type BaseLayoutProps = {
 export function BaseLayout({ children, appBarTitle }: BaseLayoutProps) {
     return (
         <>
-
             <SearchAppBar></SearchAppBar>
 
             <Box
@@ -26,7 +25,6 @@ export function BaseLayout({ children, appBarTitle }: BaseLayoutProps) {
             >
                 {children}
             </Box>
-
 
         </>
     );
