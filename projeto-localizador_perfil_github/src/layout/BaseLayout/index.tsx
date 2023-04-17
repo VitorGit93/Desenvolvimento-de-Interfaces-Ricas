@@ -1,7 +1,9 @@
 import { AppBar, Toolbar, Typography } from "@mui/material";
 import Box from "@mui/material/Box";
 import React from "react";
-import SearchAppBar from "../../components/SearchBar";
+import {CabecalhoHeader} from "../../components/CabecalhoHeader";
+import {SearchBar} from "../../components/SearchBar";
+
 type BaseLayoutProps = {
     children: React.ReactNode;
     appBarTitle: string;
@@ -9,14 +11,16 @@ type BaseLayoutProps = {
 export function BaseLayout({ children, appBarTitle }: BaseLayoutProps) {
     return (
         <>
-            <SearchAppBar></SearchAppBar>
+            <CabecalhoHeader/>
+
+            <SearchBar/>
 
             <Box
                 display='flex'
                 flexDirection='column'
                 alignItems='center'
-                padding={2}
-                mt={10}
+                padding={0}
+                mt={5}
                 sx={{
                     bgcolor: "palette.background.default",
                     width: "100%",
