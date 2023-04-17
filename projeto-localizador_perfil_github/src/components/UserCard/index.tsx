@@ -1,40 +1,39 @@
 import * as React from 'react';
-import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import {AvatarPic} from "../Avatar";
+import Box from "@mui/material/Box";
+import {Divider} from "@mui/material";
 
-const bull = (
-    <Box
-        component="span"
-        sx={{ display: 'inline-block', mx: '2px', transform: 'scale(0.8)' }}
-    >
-        •
-    </Box>
-);
+
 export function UserCard() {
     return (
-        <Card sx={{ minWidth: 275 }}>
+        <Card sx={{ minWidth: 275 }} >
+
             <CardContent>
-                <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-                    Word of the Day
-                </Typography>
-                <Typography variant="h5" component="div">
-                    be{bull}nev{bull}o{bull}lent
-                </Typography>
-                <Typography sx={{ mb: 1.5 }} color="text.secondary">
-                    adjective
-                </Typography>
-                <Typography variant="body2">
-                    well meaning and kindly.
-                    <br />
-                    {'"a benevolent smile"'}
-                </Typography>
+
+                <Box display="flex" flexDirection={{ xs: 'column', md: 'row' }}>
+                    <Box sx={{ display: 'flex', justifyContent: 'center', pb: 0, mb: { xs: 0, md: 0 } }}>
+                        <AvatarPic />
+                    </Box>
+                    <CardContent sx={{ display: 'flex', alignItems: 'center' }}>
+                        <Typography sx={{ fontSize: 22, ml: { xs: 0, md: 2 } }} color="black">
+                            Nome do perfil no Github
+                        </Typography>
+
+                    </CardContent>
+
+                </Box>
+
+                <Divider sx={{ my: 2 }} />
+
             </CardContent>
+
             <CardActions>
-                <Button size="small">Learn More</Button>
+                <Button size="medium">Ver repositórios</Button>
             </CardActions>
         </Card>
     )
