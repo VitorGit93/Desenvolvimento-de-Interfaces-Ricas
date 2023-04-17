@@ -1,6 +1,7 @@
 
 import { teal } from '@mui/material/colors';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
+import React from "react";
 
 type ThemeProps = {
     children: React.ReactNode;
