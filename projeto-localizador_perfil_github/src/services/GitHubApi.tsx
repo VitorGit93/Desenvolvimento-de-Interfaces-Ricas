@@ -1,4 +1,3 @@
-// Aqui está a chamada da API do Github, quen retorna os dados do usuário
 
 import axios from 'axios';
 

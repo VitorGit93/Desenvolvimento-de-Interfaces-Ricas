@@ -1,5 +1,5 @@
 
-import { Box, CssBaseline, Typography } from '@mui/material'
+import { Box, CssBaseline } from '@mui/material'
 import { Theme } from './theme/ThemeProvider'
 import { BaseLayout } from './layout/BaseLayout'
 import {UserCard} from "./components/UserCard";

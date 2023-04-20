@@ -1,7 +1,6 @@
 import Box from "@mui/material/Box";
 import React from "react";
 import {CabecalhoHeader} from "../../components/CabecalhoHeader";
-import {SearchBar} from "../../components/SearchBar";
 
 type BaseLayoutProps = {
     children: React.ReactNode;
