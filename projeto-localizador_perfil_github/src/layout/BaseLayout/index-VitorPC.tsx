@@ -12,20 +12,20 @@ export function BaseLayout({ children }: BaseLayoutProps) {
         <>
             <CabecalhoHeader/>
 
-            
+            <SearchBar/>
+
             <Box
                 display='flex'
                 flexDirection='column'
                 alignItems='center'
                 padding={0}
-                mt={0}
+                mt={5}
                 sx={{
                     bgcolor: "palette.background.default",
                     width: "100%",
                 }}
                 minHeight={100}
             >
-
                 {children}
             </Box>
 
