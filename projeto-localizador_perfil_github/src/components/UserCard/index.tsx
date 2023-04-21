@@ -3,9 +3,9 @@ import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import {AvatarPic} from "../Avatar";
 import Box from "@mui/material/Box";
 import {Divider} from "@mui/material";
+import { AvatarPic } from '../Avatar';
 
 
 export function UserCard() {

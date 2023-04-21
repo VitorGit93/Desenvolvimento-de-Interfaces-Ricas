@@ -10,7 +10,6 @@ export function CabecalhoHeader() {
             sx={{
                 
             }}
-        
         >
 
             <Toolbar variant="dense">
