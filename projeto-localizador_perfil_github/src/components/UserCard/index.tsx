@@ -15,10 +15,13 @@ export function UserCard() {
             <CardContent>
 
                 <Box display="flex" flexDirection={{ xs: 'column', md: 'row' }}>
+
                     <Box sx={{ display: 'flex', justifyContent: 'center', pb: 0, mb: { xs: 0, md: 0 } }}>
                         <AvatarPic />
                     </Box>
+
                     <CardContent sx={{ display: 'flex', alignItems: 'center' }}>
+                        
                         <Typography sx={{ fontSize: 22, ml: { xs: 0, md: 2 } }} color="black">
                             Nome do perfil no Github
                         </Typography>
