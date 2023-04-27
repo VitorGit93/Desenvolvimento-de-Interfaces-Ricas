@@ -18,7 +18,7 @@ function App() {
 
           <Box sx={{
             width: "100%",
-            backgroundColor: "orange",
+            background: 'linear-gradient(to right, #4A00E0, #8E2DE2)',
             display: 'flex',
             justifyContent: 'center',
             padding: '10px 0 5px 0',
