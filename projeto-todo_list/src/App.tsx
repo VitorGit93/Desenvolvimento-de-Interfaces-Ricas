@@ -31,7 +31,7 @@ function App() {
           <Container>
             <Grid container spacing={0.5}>
 
-              <Grid item xs={10} sm={12}>
+              <Grid item xl={10} sm={12}>
                 <TextField name="task" fullWidth />
 
               </Grid>
