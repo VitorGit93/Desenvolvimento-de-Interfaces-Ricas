@@ -43,41 +43,38 @@ function App() {
               position: 'relative',
             }}
           >
-            <Grid container spacing={0.5}
-              sx={{
+            <Grid container spacing={0.5} sx={{
                 position: 'absolute',
-                top: '-29px',
-              }}
-            >
+                top: '-27px',
+            }}>
 
               <Grid item xl={10} sm={12}>
-                <TextField variant='outlined' name="task" fullWidth
-                  sx={{
-                    backgroundColor: colors.grey[800],
-                  }}
-                />
+                <TextField placeholder='Adcione uma nova tarefa' variant='outlined' name="task" fullWidth sx={{
+                    backgroundColor: colors.grey[800]}}>
+                </TextField>
               </Grid>
 
               <Grid item xl={2} sm={12}>
-                <Button variant="contained" fullWidth
-                  sx={{
-                    height: '100%',
-                  }}
-                >
-                  <span> Criar </span> <PlusCircle size={32} />
+                <Button variant="contained" fullWidth sx={{
+                    height: '100%'
+                }}>
+                  <span> Criar </span> <PlusCircle size={32}/>
                 </Button>
               </Grid>
 
-            </Grid>
 
-            <Grid container spacing={theme.spacing(1)}>
+
+            <Grid container spacing={theme.spacing(1)} sx={{
+              marginTop: '25px'
+            }}>
 
               <Grid item>
                 <Typography variant='caption'
                   sx={{
                     display: 'flex',
                     alignItems: 'center',
-                    gap: theme.spacing(1),
+                    gap: theme.spacing(2),
+                    paddingLeft: '5px'
                   }}
                 >
                   <span>Tarefas Criadas</span>
@@ -86,9 +83,7 @@ function App() {
               </Grid>
 
             </Grid>
-
-
-
+            </Grid>
           </Container>
         </main>
 
