@@ -1,6 +1,7 @@
 import { AppBar, Button, Container, CssBaseline, Grid, TextField, ThemeProvider, Toolbar, Typography, colors } from '@mui/material'
 import { darkTheme } from './Themes'
 import { useTheme } from '@mui/material/styles'
+import { PlusCircle } from '@phosphor-icons/react'
 
 
 function App() {
@@ -46,15 +47,17 @@ function App() {
                     backgroundColor: colors.grey[800],
                   }}
                 />
-
               </Grid>
+
               <Grid item xl={2} sm={12}>
+                
                 <Button variant="contained" fullWidth
                   sx={{
                     height: '100%',
-                    
                   }}
-                >Criar</Button>
+                >
+                  <span> Criar </span> <PlusCircle size={32}/>
+                </Button>
 
               </Grid>
 
