@@ -1,7 +1,7 @@
 import { AppBar, Button, Container, CssBaseline, Grid, TextField, ThemeProvider, Toolbar, Typography, colors } from '@mui/material'
 import { darkTheme } from './Themes'
 import { useTheme } from '@mui/material/styles'
-import { PlusCircle } from '@phosphor-icons/react'
+import { CheckFat, PlusCircle } from '@phosphor-icons/react'
 
 
 function App() {
@@ -24,7 +24,16 @@ function App() {
               }
             }}
           >
-            <Typography variant="h5" component="h1">todo</Typography>
+            <Typography variant="h5" component="h1"
+              sx={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: theme.spacing(2),
+                color: theme.palette.primary.light,
+              }}
+            >
+              <CheckFat size = {32} weight = 'fill'/>Lista de Tarefas
+            </Typography>
           </Toolbar>
         </AppBar>
 
@@ -50,7 +59,7 @@ function App() {
               </Grid>
 
               <Grid item xl={2} sm={12}>
-                
+
                 <Button variant="contained" fullWidth
                   sx={{
                     height: '100%',
