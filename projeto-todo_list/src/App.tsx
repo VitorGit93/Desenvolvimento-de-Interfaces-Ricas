@@ -1,4 +1,4 @@
-import { AppBar, Button, Container, CssBaseline, Grid, TextField, ThemeProvider, Toolbar, Typography } from '@mui/material'
+import { AppBar, Button, Container, CssBaseline, Grid, TextField, ThemeProvider, Toolbar, Typography, colors } from '@mui/material'
 import { darkTheme } from './Themes'
 import { useTheme } from '@mui/material/styles'
 
@@ -28,15 +28,33 @@ function App() {
         </AppBar>
 
         <main>
-          <Container>
-            <Grid container spacing={0.5}>
+          <Container
+            sx={{
+              position: 'relative',
+            }}
+          >
+            <Grid container spacing={0.5}
+              sx={{
+                position: 'absolute',
+                top: '-29px',
+              }}
+            >
 
               <Grid item xl={10} sm={12}>
-                <TextField name="task" fullWidth />
+                <TextField variant='outlined' name="task" fullWidth 
+                  sx={{
+                    backgroundColor: colors.grey[800],
+                  }}
+                />
 
               </Grid>
               <Grid item xl={2} sm={12}>
-                <Button variant="contained" fullWidth>Criar</Button>
+                <Button variant="contained" fullWidth
+                  sx={{
+                    height: '100%',
+                    
+                  }}
+                >Criar</Button>
 
               </Grid>
 
