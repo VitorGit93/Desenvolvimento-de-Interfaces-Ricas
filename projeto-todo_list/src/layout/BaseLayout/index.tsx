@@ -1,13 +1,6 @@
-
-export function BaseLayout () {
+export function BaseLayout() {
     return (
         <>
-        
-            
-
-
-
-
 
 
         </>

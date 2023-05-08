@@ -5,7 +5,7 @@ import React from 'react';
 function MeuIcone(props) {
     return (
         <SvgIcon {...props}>
-            <path d="M10 10h10v10H10z" />
+            <path d="M10 10h10v10H10z"/>
         </SvgIcon>
     );
 }
