@@ -7,20 +7,23 @@ import TaskList from './components/TaskList';
 function App() {
     return (
         <ThemeProvider theme={darkTheme}>
+
             <CssBaseline />
+
             <HeaderCabecalho />
-            <main
-                
-            >
-                <Container
-                    sx={{
-                        position: 'relative',
-                        top: '-27px'
-                    }}>
+
+            <main>
+
+                <Container sx={{ position: 'relative', top: '-27px' }}>
+
                     <TaskInput />
+
                     <TaskList />
+
                 </Container>
+
             </main>
+
         </ThemeProvider>
     );
 }
