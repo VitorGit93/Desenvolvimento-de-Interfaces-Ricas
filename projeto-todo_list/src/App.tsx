@@ -9,8 +9,14 @@ function App() {
         <ThemeProvider theme={darkTheme}>
             <CssBaseline />
             <HeaderCabecalho />
-            <main>
-                <Container sx={{ position: 'relative' }}>
+            <main
+                
+            >
+                <Container
+                    sx={{
+                        position: 'relative',
+                        top: '-27px'
+                    }}>
                     <TaskInput />
                     <TaskList />
                 </Container>
