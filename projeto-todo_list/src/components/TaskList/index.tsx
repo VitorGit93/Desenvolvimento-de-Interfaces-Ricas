@@ -5,7 +5,14 @@ function TaskList() {
     const theme = useTheme();
 
     return (
-        <Grid container spacing={theme.spacing(1)} sx={{ marginTop: '25px' }}>
+        <Grid container spacing={theme.spacing(1)}
+            sx={{
+                marginTop: '25px',
+                border: '1px solid #3d4b5c',
+                borderRadius: '4px',
+                padding: '10px',
+                backgroundColor: '#20252b',
+            }}>
             <Grid item>
                 <Typography variant='caption'
                     sx={{
