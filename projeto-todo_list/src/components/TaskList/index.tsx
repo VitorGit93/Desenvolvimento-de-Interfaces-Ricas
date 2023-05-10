@@ -22,7 +22,7 @@ function TaskList() {
                         paddingLeft: '5px'
                     }}
                 >
-                    <span>Tarefas Criadas</span>
+                    <span><h3>Tarefas criadas</h3></span>
                     <Badge color="primary" badgeContent={0} showZero></Badge>
                 </Typography>
             </Grid>
