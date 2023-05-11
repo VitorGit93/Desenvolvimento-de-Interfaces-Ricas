@@ -8,6 +8,9 @@ const customPalette = {
   secondary: {
     main: green[500],
   },
+  error: {
+    main: "#ed213a",
+  },
 };
 
 export const darkTheme = createTheme({

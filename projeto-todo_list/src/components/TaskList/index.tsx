@@ -79,9 +79,12 @@ function TaskList() {
                             alignItems: 'center'
                         }}
                     >
-                        
-                      <Tarefa titulo={'Aula de React'} subtitulo={''} descricao={''} data={''}/>
-
+                      <Tarefa
+                        titulo={'Aula de React'}
+                        subtitulo={'React components'}
+                        descricao={'Automação de tarefas com Gulp, Webpack e Grunt'}
+                        data={'11/05/2023'}
+                      />
                     </Stack> {/* Fim da pilha de tarefas */}
                 </Grid> {/* Fim do Grid item que representa a lista de tarefas */}
 

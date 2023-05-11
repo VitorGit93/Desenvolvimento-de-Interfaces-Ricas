@@ -6,7 +6,7 @@ type TarefaProps = {
     descricao: string;
     data: string;
 }
-
+ {/* red background: linear-gradient(to right, #ed213a, #93291e) */}
 
 export function Tarefa ( {titulo, subtitulo, descricao, data}: TarefaProps ) {
 
@@ -23,7 +23,7 @@ export function Tarefa ( {titulo, subtitulo, descricao, data}: TarefaProps ) {
                     width: '100%',
                     justifyContent: 'space-evenly',
                     border: '1px solid #3d4b6c',
-                    backgroundColor: '#20252b'
+                    backgroundColor: '#20252b',
                 }}
             >
                 <CardHeader
@@ -41,7 +41,7 @@ export function Tarefa ( {titulo, subtitulo, descricao, data}: TarefaProps ) {
                 </CardContent>
 
                 <CardActions>
-                    <Button variant='outlined' >Concluir</Button>
+                    <Button variant='contained'>Editar</Button>
                 </CardActions>
             </Card> 
 
