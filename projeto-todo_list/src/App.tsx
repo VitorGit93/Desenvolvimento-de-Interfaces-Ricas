@@ -18,7 +18,7 @@ function App() {
                  sx={{
                     position: 'relative',
                     top: '-27px',
-                        background: 'linear-gradient(to right, #005c97, #363795)'
+                        //background: 'linear-gradient(to right, #005c97, #363795)'
                     
                 }}>
 
