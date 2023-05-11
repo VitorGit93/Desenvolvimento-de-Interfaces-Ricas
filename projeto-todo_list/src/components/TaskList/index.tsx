@@ -1,5 +1,6 @@
-import { Badge, Card, CardActions, CardContent, CardHeader, Divider, Grid, Stack, Typography } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
+import { Tarefa } from '../Tarefa';
+import { Badge, Divider, Grid, Stack, Typography } from '@mui/material';
 
 function TaskList() {
     const theme = useTheme();
@@ -78,68 +79,8 @@ function TaskList() {
                             alignItems: 'center'
                         }}
                     >
-                        {/* Card (filha de Stack) que representa uma tarefa */}
-                        <Card
-                            sx={{
-                                display: 'flex',
-                                alignItems: 'center',
-                                gap: theme.spacing(2),
-                                width: '100%',
-                                justifyContent: 'space-evenly',
-                                border: '1px solid #3d4b6c',
-                                backgroundColor: '#20252b'
-                            }}
-                        >
-                            <CardHeader
-                                sx={{
-                                    border: '1px solid #3d4b6c',
-                                    backgroundColor: '#20252b'
-                                }}
-                                title="Lavar a louça"
-                                subheader="Para 10/10/2021"
-                            />
-                            <CardContent>
-                                <p className='descricao-da-tarefa'>
-                                    Lavar a louça do almoço com detergente de qualidade
-                                </p>
-                            </CardContent>
-
-                            <CardActions>
-                                <button className='botao-concluir-tarefa'>Concluir</button>
-                            </CardActions>
-                        </Card> 
-
-                        {/* Card (filha de Stack) que representa uma tarefa */}
-                        <Card
-                            sx={{
-                                display: 'flex',
-                                alignItems: 'center',
-                                gap: theme.spacing(2),
-                                width: '100%',
-                                justifyContent: 'space-evenly',
-                                border: '1px solid #3d4b6c',
-                                backgroundColor: '#20252b'
-                            }}
-                        >
-                            <CardHeader
-                                sx={{
-                                    border: '1px solid #3d4b6c',
-                                    backgroundColor: '#20252b'
-                                }}
-                                title="Lavar a louça"
-                                subheader="Para 10/10/2021"
-                            />
-                            <CardContent>
-                                <p className='descricao-da-tarefa'>
-                                    Lavar a louça do almoço com detergente de qualidade
-                                </p>
-                            </CardContent>
-
-                            <CardActions>
-                                <button className='botao-concluir-tarefa'>Concluir</button>
-                            </CardActions>
-                        </Card>
-
+                        
+                      <Tarefa titulo={'Aula de React'} subtitulo={''} descricao={''} data={''}/>
 
                     </Stack> {/* Fim da pilha de tarefas */}
                 </Grid> {/* Fim do Grid item que representa a lista de tarefas */}
