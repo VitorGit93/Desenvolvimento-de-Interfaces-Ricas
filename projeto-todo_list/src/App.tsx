@@ -18,12 +18,8 @@ function App() {
                  sx={{
                     position: 'relative',
                     top: '-27px',
-<<<<<<< Updated upstream
                         //background: 'linear-gradient(to right, #005c97, #363795)'
                     
-=======
-                        background: 'linear-gradient(to right, #005c97, #363795)'
->>>>>>> Stashed changes
                 }}>
 
                     <TaskInput />
