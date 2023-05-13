@@ -81,7 +81,6 @@ function TaskList() {
                     >
                       <Tarefa
                         titulo={'Aula de React'}
-                        subtitulo={'React components'}
                         descricao={'Automação de tarefas com Gulp, Webpack e Grunt'}
                         data={'11/05/2023'}
                       />

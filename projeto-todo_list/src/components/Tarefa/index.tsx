@@ -1,14 +1,14 @@
-import { Button, Card, CardActions, CardContent, CardHeader, useTheme } from "@mui/material";
+import { Box, Button, Card, CardActions, CardContent, CardHeader, Typography, useTheme } from "@mui/material";
+import { Pencil, Trash } from "@phosphor-icons/react";
 
 type TarefaProps = {
     titulo: "Aula de React";
-    subtitulo: string;
     descricao: string;
     data: string;
 }
- {/* red background: linear-gradient(to right, #ed213a, #93291e) */}
+{/* red background: linear-gradient(to right, #ed213a, #93291e) */ }
 
-export function Tarefa ( {titulo, subtitulo, descricao, data}: TarefaProps ) {
+export function Tarefa({ titulo, descricao, data }: TarefaProps) {
 
     const theme = useTheme();
 
@@ -31,19 +31,75 @@ export function Tarefa ( {titulo, subtitulo, descricao, data}: TarefaProps ) {
                         border: '1px solid #3d4b6c',
                         backgroundColor: '#20252b'
                     }}
-                    title = {titulo}
-                    subheader = {subtitulo}
+                    title={<Typography variant='h6'
+                        sx={{
+                            fontFamily: 'Consolas, monospace',
+                        }}
+                    >{titulo}</Typography>}
                 />
-                <CardContent>
-                    <p className = 'descricao-da-tarefa'>
-                        {descricao}
-                    </p>
+
+                <CardContent
+                    sx={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: theme.spacing(1),
+                        border: '1px solid #3d4b6c',
+                        backgroundColor: '#20252b'
+                    }}
+                >
+                    <Box sx={{
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            border: '1px solid #3d4b6c',
+                            backgroundColor: '#20252b'
+                        }}>
+                    <p>{descricao}</p>
+                    </Box>
+
+                    <Box sx={{
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            border: '1px solid #3d4b6c',
+                            backgroundColor: '#20252b'
+                        }}>
+                        {data}
+                    </Box>
+
+
                 </CardContent>
 
-                <CardActions>
-                    <Button variant='contained'>Editar</Button>
+                <CardActions
+                    sx={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center'
+                    }}
+                >
+                    
+                    <Button variant='contained' color="info"
+                        sx={{
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                        }}
+                    >
+                        <Pencil size={20} weight="bold" />
+                    </Button>
+
+                    <Button variant='contained' color="error"
+                        sx={{
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                        }}
+                    >
+                        <Trash size={20}  weight="bold" /> 
+                    </Button>
+
                 </CardActions>
-            </Card> 
+            </Card>
 
 
         </>

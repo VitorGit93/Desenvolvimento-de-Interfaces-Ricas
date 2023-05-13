@@ -9,7 +9,7 @@ const customPalette = {
     main: green[500],
   },
   error: {
-    main: "#ed213a",
+    main: "linear-gradient(to right, #ed213a, #93291e)",
   },
 };
 
