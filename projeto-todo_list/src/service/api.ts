@@ -7,22 +7,32 @@ export const api = axios.create({
 });
 
 export async function getAll() {
-  const typeTarefa = await api.get("typeTarefa");
-  return typeTarefa.data;
+  const tarefa = await api.get("typeTarefa");
+  return tarefa.data;
 }
 export async function getById(id: number) {
-  const typeTarefa = await api.get(`tasks/${id}`);
-  return typeTarefa.data;
+  const tarefa = await api.get(`typeTarefa/${id}`);
+  return tarefa.data;
 }
-export async function save(typeTarefa: typeTarefa) {
-  const response = await api.post(`typeTarefa`, { ...typeTarefa});
+export async function save(tarefa: typeTarefa) {
+  const response = await api.post(`tarefa`, { ...tarefa });
   return response.data;
 }
-export async function update(typeTarefa: typeTarefa) {
-  const response = await api.put(`typeTarefa/${typeTarefa.id}`, {...typeTarefa});
+export async function update(tarefa: typeTarefa) {
+  const response = await api.put(`tarefa/${tarefa.id}`, { ...tarefa });
   return response.data;
 }
 export async function exclude(id: number) {
-  const typeTarefa = await api.delete(`typeTarefa/${id}`);
-  return typeTarefa.data;
+  const tarefa = await api.delete(`typeTarefa/${id}`);
+  return tarefa.data;
+}
+
+export async function createTask(tarefa: typeTarefa) {
+  try {
+    const response = await api.post('/tarefa', tarefa);
+    return response.data;
+  } catch(error) {
+    console.error('Erro ao criar a tarefa: ', error);
+    throw error;
+  }
 }

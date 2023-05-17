@@ -2,7 +2,11 @@ import { useTheme } from '@mui/material/styles';
 import { Tarefa } from '../Tarefa';
 import { Badge, Divider, Grid, Stack, Typography } from '@mui/material';
 
+
+
+
 function TaskList() {
+
     const theme = useTheme();
 
     return (
@@ -82,11 +86,7 @@ function TaskList() {
                             width: '100%'
                         }}
                     >
-                      <Tarefa
-                        titulo={'Aula de React'}
-                        descricao={'Automação de tarefas com Gulp, Webpack e Grunt'}
-                        data={'11/05/2023'}
-                      />
+                      {}
                     </Stack> {/* Fim da pilha de tarefas */}
                 </Grid> {/* Fim do Grid item que representa a lista de tarefas */}
 

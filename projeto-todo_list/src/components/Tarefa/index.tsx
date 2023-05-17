@@ -5,11 +5,12 @@ import { Pencil, Trash } from "@phosphor-icons/react";
 type TarefaProps = {
     titulo: "Aula de React";
     descricao: string;
-    data: string;
+    dataCriacao: string;    
+    done: boolean;
 }
-{/* red background: linear-gradient(to right, #ed213a, #93291e) */ }
 
-export function Tarefa({ titulo, descricao, data }: TarefaProps) {
+
+export function Tarefa({ titulo, descricao, dataCriacao, done }: TarefaProps) {
 
     const theme = useTheme();
     const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
@@ -67,7 +68,7 @@ export function Tarefa({ titulo, descricao, data }: TarefaProps) {
                         border: '1px solid #3d4b6c',
                         backgroundColor: '#20252b'
                     }}>
-                        {data}
+                        {dataCriacao}
                     </Box>
 
 
@@ -81,7 +82,7 @@ export function Tarefa({ titulo, descricao, data }: TarefaProps) {
                     }}
                 >
 
-                    <Checkbox {...label}  />
+                    <Checkbox {...label} defaultChecked />
 
                     <Button variant='contained' color="info"
                         sx={{
