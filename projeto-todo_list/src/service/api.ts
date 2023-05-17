@@ -15,15 +15,11 @@ export async function getById(id: number) {
   return typeTarefa.data;
 }
 export async function save(typeTarefa: typeTarefa) {
-  const response = await api.post(`typeTarefa`, {
-    ...typeTarefa,
-  });
+  const response = await api.post(`typeTarefa`, { ...typeTarefa});
   return response.data;
 }
 export async function update(typeTarefa: typeTarefa) {
-  const response = await api.put(`typeTarefa/${typeTarefa.id}`, {
-    ...typeTarefa,
-  });
+  const response = await api.put(`typeTarefa/${typeTarefa.id}`, {...typeTarefa});
   return response.data;
 }
 export async function exclude(id: number) {
