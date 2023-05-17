@@ -8,22 +8,27 @@ export function TaskInput() {
     const [task, setTasks] = useState('');
 
     const handleCreateTask = () => {
+
+
         // Verifica se o campo está vazio
         if (task.trim() === '') { return; }
 
         // Cria um objeto  de task com os dados digitados
         const novaTask  = {
-            id: 1,
+            id: Math.random() * 1000,
             titulo: task,
-            descricao: '',
-            data: '',
+            descricao: task,
+            data: new Date().toISOString(), // Pega a data atual e converte para string
+            status: false
         }
+
 
         // Aqui se pode chamar a função de criação da task da API
         // Passando o objeto newTask como parâmetro
         // Por exemplo: createTask(newTask);
 
-        createTask(novaTask);
+
+        createTask()
 
         // Limpa o campo de texto
         setTasks('');

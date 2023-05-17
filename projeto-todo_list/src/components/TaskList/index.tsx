@@ -14,11 +14,19 @@ function TaskList() {
     const fetchTasks = async () => {
         try {
             const tarefaDados = await getAll();
-            setTasks(tarefaDados); // Atualiza o estado "tasks" com os dados das tasks obtidas da API
+            const tarefasMapeadas = tarefaDados.tarefas.map((tarefa: typeTarefa) => ({
+                id: tarefa.id,
+                titulo: tarefa.titulo,
+                descricao: tarefa.descricao,
+                dataCriacao: tarefa.data,
+                done: tarefa.status === 'concluido',
+            }));
+            setTasks(tarefasMapeadas);
         } catch (error) {
             console.error('Erro ao buscar as tarefas: ', error);
         }
     };
+
 
     useEffect(() => {
         fetchTasks();
@@ -102,6 +110,8 @@ function TaskList() {
                         }}
                     >
 
+                        {/* Aqui irá a lista das tasks lançadas */}
+                        
                         {tasks.map((task) => (
                             <Tarefa
                                 key={task.id}
@@ -109,12 +119,12 @@ function TaskList() {
                                 descricao={task.descricao}
                                 dataCriacao={task.dataCriacao}
                                 done={task.done}
+
+
+
+
                             />
                         ))}
-
-
-
-
 
                     </Stack> {/* Fim da pilha de tasks */}
                 </Grid> {/* Fim do Grid item que representa a lista de tasks */}
