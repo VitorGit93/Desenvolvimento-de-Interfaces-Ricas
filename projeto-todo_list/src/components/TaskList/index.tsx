@@ -48,7 +48,7 @@ function TaskList() {
                             display: 'flex',
                             alignItems: 'center',
                             gap: theme.spacing(2),
-                            paddingRight: '-5px',
+                            paddingRight: '20px',
                         }}
                     >
                         <span><h3>Concluídas</h3></span>
@@ -66,6 +66,7 @@ function TaskList() {
                     sx={{
                         display: 'flex',
                         alignItems: 'center',
+                        padding: '5px',
                         gap: theme.spacing(2),
                         justifyContent: 'space-between',
                         border: '1px solid #3d4b6c',
@@ -76,7 +77,7 @@ function TaskList() {
                     {/* Pilha (filha de Grid item) onde ficarão as tarefas */}
                     <Stack spacing={2}
                         sx={{
-                            display: 'flex',
+                            display: 'grid',
                             alignItems: 'center',
                             width: '100%'
                         }}

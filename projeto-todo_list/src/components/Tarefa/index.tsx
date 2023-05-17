@@ -1,5 +1,6 @@
-import { Box, Button, Card, CardActions, CardContent, CardHeader, Typography, useTheme } from "@mui/material";
+import { Box, Button, Card, CardActions, CardContent, CardHeader, Checkbox, Typography, useTheme } from "@mui/material";
 import { Pencil, Trash } from "@phosphor-icons/react";
+
 
 type TarefaProps = {
     titulo: "Aula de React";
@@ -11,6 +12,7 @@ type TarefaProps = {
 export function Tarefa({ titulo, descricao, data }: TarefaProps) {
 
     const theme = useTheme();
+    const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
 
     return (
         <>
@@ -26,44 +28,45 @@ export function Tarefa({ titulo, descricao, data }: TarefaProps) {
                     width: '100%'
                 }}
             >
-                <CardHeader
-                    sx={{
-                        border: '1px solid #3d4b6c',
-                        backgroundColor: '#20252b'
-                    }}
-                    title={<Typography variant='h6'
-                        sx={{
-                            fontFamily: 'Consolas, monospace',
-                        }}
-                    >{titulo}</Typography>}
-                />
 
                 <CardContent
                     sx={{
                         display: 'flex',
-                        alignItems: 'center',
+                        alignItems: 'space-between',
                         gap: theme.spacing(1),
                         border: '1px solid #3d4b6c',
                         backgroundColor: '#20252b'
                     }}
                 >
-                    <Box sx={{
-                            display: 'flex',
-                            alignItems: 'center',
-                            justifyContent: 'center',
+
+                    <CardHeader
+                        sx={{
                             border: '1px solid #3d4b6c',
                             backgroundColor: '#20252b'
-                        }}>
-                    <p>{descricao}</p>
+                        }}
+                        title={<Typography variant='h6'
+                            sx={{ fontFamily: 'Consolas, monospace', color: '#f55fff' }}
+                                >{titulo}</Typography>
+                        }
+                    />
+
+                    <Box sx={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        border: '1px solid #3d4b6c',
+                        backgroundColor: '#20252b'
+                    }}>
+                        <p>{descricao}</p>
                     </Box>
 
                     <Box sx={{
-                            display: 'flex',
-                            alignItems: 'center',
-                            justifyContent: 'center',
-                            border: '1px solid #3d4b6c',
-                            backgroundColor: '#20252b'
-                        }}>
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        border: '1px solid #3d4b6c',
+                        backgroundColor: '#20252b'
+                    }}>
                         {data}
                     </Box>
 
@@ -77,7 +80,9 @@ export function Tarefa({ titulo, descricao, data }: TarefaProps) {
                         justifyContent: 'center'
                     }}
                 >
-                    
+
+                    <Checkbox {...label}  />
+
                     <Button variant='contained' color="info"
                         sx={{
                             display: 'flex',
@@ -95,7 +100,7 @@ export function Tarefa({ titulo, descricao, data }: TarefaProps) {
                             justifyContent: 'center',
                         }}
                     >
-                        <Trash size={20}  weight="bold" /> 
+                        <Trash size={20} weight="bold" />
                     </Button>
 
                 </CardActions>
