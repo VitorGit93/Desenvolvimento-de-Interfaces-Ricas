@@ -1,41 +1,44 @@
-import TaskList from '../TaskList';
 import { Button, Grid, TextField, colors } from '@mui/material';
 import { PlusCircle } from '@phosphor-icons/react';
-import React, { useState } from 'react';
+import { useState } from 'react';
+import { createTask } from '../../service/api';
 
 export function TaskInput() {
 
-    const [tarefa, setTarefa] = useState('');
+    const [task, setTasks] = useState('');
 
     const handleCreateTask = () => {
         // Verifica se o campo está vazio
-        if (tarefa.trim() === '') { return; }
+        if (task.trim() === '') { return; }
 
-        // Cria um objeto  de tarefa com os dados digitados
-        const newTask = {
-            titulo: tarefa,
+        // Cria um objeto  de task com os dados digitados
+        const novaTask  = {
+            id: 1,
+            titulo: task,
             descricao: '',
-            data: ''
+            data: '',
         }
 
-        // Aqui se pode chamar a função de criação da tarefa da API
+        // Aqui se pode chamar a função de criação da task da API
         // Passando o objeto newTask como parâmetro
         // Por exemplo: createTask(newTask);
 
+        createTask(novaTask);
+
         // Limpa o campo de texto
-        setTarefa('');
+        setTasks('');
     };
 
     return (
         <Grid container spacing={0.5}>
             <Grid item xl={10} sm={12}>
                 <TextField
-                    name="tarefa"
-                    value={tarefa}
-                    placeholder='Adcione uma nova tarefa'
+                    name="task"
+                    value={task}
+                    placeholder='Adcione uma nova task'
                     variant='outlined'
                     fullWidth sx={{ backgroundColor: colors.grey[800] }}
-                    onChange={(e) => setTarefa(e.target.value)}
+                    onChange={(e) => setTasks(e.target.value)}
                 />
             </Grid>
             <Grid item xl={2} sm={12}>

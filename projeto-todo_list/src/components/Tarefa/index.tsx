@@ -3,6 +3,7 @@ import { Pencil, Trash } from "@phosphor-icons/react";
 
 
 type TarefaProps = {
+    id: number;
     titulo: "Aula de React";
     descricao: string;
     dataCriacao: string;    

@@ -1,7 +1,9 @@
 export type typeTarefa = {
-  id?: number;
+  id: number;
   title: string;
   description?: string;
   dateCreated?: string;
   done: boolean;
 };
+
+

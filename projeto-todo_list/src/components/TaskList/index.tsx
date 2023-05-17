@@ -5,18 +5,16 @@ import { useEffect, useState } from 'react';
 import { getAll } from '../../service/api';
 
 
-
-
 function TaskList() {
 
     const theme = useTheme();
 
-    const [tarefa, setTarefa] = useState([]);
+    const [tasks, setTasks] = useState([]);
 
     const fetchTasks = async () => {
         try {
             const tarefaDados = await getAll();
-            setTarefa(tarefaDados);
+            setTasks(tarefaDados); // Atualiza o estado "tasks" com os dados das tasks obtidas da API
         } catch (error) {
             console.error('Erro ao buscar as tarefas: ', error);
         }
@@ -25,9 +23,6 @@ function TaskList() {
     useEffect(() => {
         fetchTasks();
     }, []);
-
-    
-
 
     return (
         <>
@@ -84,7 +79,7 @@ function TaskList() {
 
                 {/* ======================================================================================================= */}
 
-                {/* Aqui irá a lista das tarefas lançadas */}
+                {/* Aqui irá a lista das tasks lançadas */}
                 <Grid item
                     xl={12}
                     sx={{
@@ -95,10 +90,10 @@ function TaskList() {
                         justifyContent: 'space-between',
                         border: '1px solid #3d4b6c',
                         backgroundColor: '#85283b',
-                        
+
                     }}
                 >
-                    {/* Pilha (filha de Grid item) onde ficarão as tarefas */}
+                    {/* Pilha (filha de Grid item) onde ficarão as tasks */}
                     <Stack spacing={2}
                         sx={{
                             display: 'grid',
@@ -106,13 +101,27 @@ function TaskList() {
                             width: '100%'
                         }}
                     >
-                      {}
-                    </Stack> {/* Fim da pilha de tarefas */}
-                </Grid> {/* Fim do Grid item que representa a lista de tarefas */}
+
+                        {tasks.map((task) => (
+                            <Tarefa
+                                key={task.id}
+                                titulo={task.titulo}
+                                descricao={task.descricao}
+                                dataCriacao={task.dataCriacao}
+                                done={task.done}
+                            />
+                        ))}
+
+
+
+
+
+                    </Stack> {/* Fim da pilha de tasks */}
+                </Grid> {/* Fim do Grid item que representa a lista de tasks */}
 
                 {/* ======================================================================================================= */}
 
-            </Grid> {/* Fim do Grid container que representa a lista de tarefas */}
+            </Grid> {/* Fim do Grid container que representa a lista de tasks */}
             <Divider /> {/* Divisor de conteúdo */}
         </>
     );
