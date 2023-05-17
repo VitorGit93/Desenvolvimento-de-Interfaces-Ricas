@@ -118,12 +118,8 @@ function TaskList() {
                                 key={task.id}
                                 titulo={task.titulo}
                                 descricao={task.descricao}
-                                dataCriacao={task.dataCriacao}
+                                dataCriacao={task.dataCriacao}                                
                                 status={task.status}
-
-
-
-
                             />
                         ))}
 
