@@ -3,6 +3,7 @@ import { Tarefa } from '../Tarefa';
 import { Badge, Divider, Grid, Stack, Typography } from '@mui/material';
 import { useEffect, useState } from 'react';
 import { getAll } from '../../service/api';
+import { typeTarefa } from '../../types/typeTarefa';
 
 
 function TaskList() {
@@ -18,8 +19,8 @@ function TaskList() {
                 id: tarefa.id,
                 titulo: tarefa.titulo,
                 descricao: tarefa.descricao,
-                dataCriacao: tarefa.data,
-                done: tarefa.status === 'concluido',
+                dataCriacao: tarefa.dataCriada,
+                status: tarefa.status
             }));
             setTasks(tarefasMapeadas);
         } catch (error) {
@@ -112,13 +113,13 @@ function TaskList() {
 
                         {/* Aqui irá a lista das tasks lançadas */}
                         
-                        {tasks.map((task) => (
+                        {tasks.map(( task: typeTarefa ) => (
                             <Tarefa
                                 key={task.id}
                                 titulo={task.titulo}
                                 descricao={task.descricao}
                                 dataCriacao={task.dataCriacao}
-                                done={task.done}
+                                status={task.status}
 
 
 
