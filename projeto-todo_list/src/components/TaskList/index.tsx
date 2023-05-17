@@ -69,14 +69,16 @@ function TaskList() {
                         gap: theme.spacing(2),
                         justifyContent: 'space-between',
                         border: '1px solid #3d4b6c',
-                        backgroundColor: '#85283b'
+                        backgroundColor: '#85283b',
+                        
                     }}
                 >
                     {/* Pilha (filha de Grid item) onde ficarão as tarefas */}
                     <Stack spacing={2}
                         sx={{
                             display: 'flex',
-                            alignItems: 'center'
+                            alignItems: 'center',
+                            width: '100%'
                         }}
                     >
                       <Tarefa

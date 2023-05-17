@@ -19,11 +19,11 @@ export function Tarefa({ titulo, descricao, data }: TarefaProps) {
                 sx={{
                     display: 'flex',
                     alignItems: 'center',
-                    gap: theme.spacing(2),
-                    width: '100%',
-                    justifyContent: 'space-evenly',
+                    gap: theme.spacing(),
+                    justifyContent: 'space-between',
                     border: '1px solid #3d4b6c',
                     backgroundColor: '#20252b',
+                    width: '100%'
                 }}
             >
                 <CardHeader
