@@ -3,7 +3,7 @@ import { typeTarefa } from "../types/typeTarefa";
 
 export const api = axios.create({
   baseURL: "http://localhost:3000",
-  timeout: 3000,
+  timeout: 2000
 });
 
 export async function getAll() {
