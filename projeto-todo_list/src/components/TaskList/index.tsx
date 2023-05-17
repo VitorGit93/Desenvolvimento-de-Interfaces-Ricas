@@ -1,6 +1,8 @@
 import { useTheme } from '@mui/material/styles';
 import { Tarefa } from '../Tarefa';
 import { Badge, Divider, Grid, Stack, Typography } from '@mui/material';
+import { useEffect, useState } from 'react';
+import { getAll } from '../../service/api';
 
 
 
@@ -8,6 +10,24 @@ import { Badge, Divider, Grid, Stack, Typography } from '@mui/material';
 function TaskList() {
 
     const theme = useTheme();
+
+    const [tarefa, setTarefa] = useState([]);
+
+    const fetchTasks = async () => {
+        try {
+            const tarefaDados = await getAll();
+            setTarefa(tarefaDados);
+        } catch (error) {
+            console.error('Erro ao buscar as tarefas: ', error);
+        }
+    };
+
+    useEffect(() => {
+        fetchTasks();
+    }, []);
+
+    
+
 
     return (
         <>
