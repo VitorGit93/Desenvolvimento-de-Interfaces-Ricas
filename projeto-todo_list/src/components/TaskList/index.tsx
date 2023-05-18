@@ -10,19 +10,12 @@ function TaskList() {
 
     const theme = useTheme();
 
-    const [tasks, setTasks] = useState([]);
+    const [tasks, setTasks] = useState<typeTarefa[]>([]);
 
     const fetchTasks = async () => {
         try {
             const tarefaDados = await getAll();
-            const tarefasMapeadas = tarefaDados.tarefas.map((tarefa: typeTarefa) => ({
-                id: tarefa.id,
-                titulo: tarefa.titulo,
-                descricao: tarefa.descricao,
-                dataCriacao: tarefa.dataCriada,
-                status: tarefa.status
-            }));
-            setTasks(tarefasMapeadas);
+            setTasks(tarefaDados);
         } catch (error) {
             console.error('Erro ao buscar as tarefas: ', error);
         }
@@ -110,18 +103,24 @@ function TaskList() {
                             width: '100%'
                         }}
                     >
-
                         {/* Aqui irá a lista das tasks lançadas */}
                         
                         {tasks.map(( task: typeTarefa ) => (
                             <Tarefa
-                                key={task.id}
-                                titulo={task.titulo}
-                                descricao={task.descricao}
-                                dataCriacao={task.dataCriacao}                                
-                                status={task.status}
+                                taskData={task}
                             />
                         ))}
+
+
+                        {/* <Tarefa
+                            id={1}
+                            titulo="Tarefa 1"
+                            descricao="Descrição da tarefa 1"
+                            dataCriacao="01/01/2021"
+                            status={false}
+                        /> */}
+                           
+                        
 
                     </Stack> {/* Fim da pilha de tasks */}
                 </Grid> {/* Fim do Grid item que representa a lista de tasks */}

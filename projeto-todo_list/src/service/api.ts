@@ -7,11 +7,11 @@ export const api = axios.create({
 });
 
 export async function getAll() {
-  const tarefa = await api.get("typeTarefa");
+  const tarefa = await api.get("tarefa");
   return tarefa.data;
 }
 export async function getById(id: number) {
-  const tarefa = await api.get(`typeTarefa/${id}`);
+  const tarefa = await api.get(`tarefa/${id}`);
   return tarefa.data;
 }
 export async function save(tarefa: typeTarefa) {
@@ -23,7 +23,7 @@ export async function update(tarefa: typeTarefa) {
   return response.data;
 }
 export async function exclude(id: number) {
-  const tarefa = await api.delete(`typeTarefa/${id}`);
+  const tarefa = await api.delete(`tarefa/${id}`);
   return tarefa.data;
 }
 

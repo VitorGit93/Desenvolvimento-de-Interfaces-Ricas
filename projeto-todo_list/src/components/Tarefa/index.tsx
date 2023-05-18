@@ -1,18 +1,13 @@
 import { Box, Button, Card, CardActions, CardContent, CardHeader, Checkbox, Typography, useTheme } from "@mui/material";
 import { Pencil, Trash } from "@phosphor-icons/react";
+import { typeTarefa } from "../../types/typeTarefa";
 
 
 type TarefaProps = {
-    id: number;
-    titulo: string;
-    descricao: string;
-    dataCriacao: string;
-    status: boolean;
+    taskData: typeTarefa
 };
 
-
-
-export function Tarefa({ titulo, descricao, dataCriacao, status }: TarefaProps) {
+export function Tarefa({taskData}: TarefaProps) {
 
     const theme = useTheme();
     const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
@@ -49,7 +44,7 @@ export function Tarefa({ titulo, descricao, dataCriacao, status }: TarefaProps) 
                         }}
                         title={<Typography variant='h6'
                             sx={{ fontFamily: 'Consolas, monospace', color: '#f55fff' }}
-                                >{titulo}</Typography>
+                                >{taskData.titulo}</Typography>
                         }
                     />
 
@@ -60,7 +55,7 @@ export function Tarefa({ titulo, descricao, dataCriacao, status }: TarefaProps) 
                         border: '1px solid #3d4b6c',
                         backgroundColor: '#20252b'
                     }}>
-                        <p>{descricao}</p>
+                        <p>{taskData.descricao}</p>
                     </Box>
 
                     <Box sx={{
@@ -70,7 +65,7 @@ export function Tarefa({ titulo, descricao, dataCriacao, status }: TarefaProps) 
                         border: '1px solid #3d4b6c',
                         backgroundColor: '#20252b'
                     }}>
-                        {dataCriacao}
+                        {taskData.dataCriada}
                     </Box>
 
 
@@ -84,7 +79,7 @@ export function Tarefa({ titulo, descricao, dataCriacao, status }: TarefaProps) 
                     }}
                 >
 
-                    <Checkbox {...label} checked={status} />
+                    <Checkbox {...label} color="success" checked={taskData.status} />
 
                     <Button variant='contained' color="info"
                         sx={{

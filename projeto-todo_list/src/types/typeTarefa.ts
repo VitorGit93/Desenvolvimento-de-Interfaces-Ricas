@@ -1,5 +1,5 @@
 export type typeTarefa = {
-  id: number;
+  id?: number;
   titulo: string;
   descricao?: string;
   dataCriada?: string;

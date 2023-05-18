@@ -1,11 +1,18 @@
 {
-  "tarefas": [
+  "tarefa": [
     {
       "id": 1,
       "titulo": "Tarefa 1",
       "descricao": "Descrição da tarefa 1",
-      "dataCriacao": "2019-01-01",
-      "status": "pendente"      
+      "dataCriada": "2019-01-01",
+      "status": "pendente"
+    },
+    {
+      "id": 2,
+      "titulo": "Tarefa 2",
+      "descricao": "Descrição da tarefa 1",
+      "dataCriada": "2019-01-01",
+      "status": "pendente"
     }
   ]
 }
