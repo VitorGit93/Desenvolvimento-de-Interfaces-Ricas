@@ -1,30 +1,15 @@
 import { useTheme } from '@mui/material/styles';
 import { Tarefa } from '../Tarefa';
-import { Badge, Box, Divider, Grid, Stack, Typography } from '@mui/material';
-import { useEffect, useState } from 'react';
-import { getAll } from '../../service/api';
+import { Badge, Divider, Grid, Stack, Typography } from '@mui/material';
 import { typeTarefa } from '../../types/typeTarefa';
 
+type TaskListProps = {
+    tasks: typeTarefa[],
+};
 
-function TaskList() {
+function TaskList({tasks}: TaskListProps) {
 
     const theme = useTheme();
-
-    const [tasks, setTasks] = useState<typeTarefa[]>([]);
-
-    const fetchTasks = async () => {
-        try {
-            const tarefaDados = await getAll();
-            setTasks(tarefaDados);
-        } catch (error) {
-            console.error('Erro ao buscar as tarefas: ', error);
-        }
-    };
-
-
-    useEffect(() => {
-        fetchTasks();
-    }, []);
 
     return (
         <>
@@ -110,7 +95,7 @@ function TaskList() {
 
 
 
-                        {tasks.map((task: typeTarefa) => (
+                        {tasks?.map((task: typeTarefa) => (
                             <Tarefa taskData={task} />
                         ))}
 

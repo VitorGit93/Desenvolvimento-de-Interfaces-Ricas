@@ -3,7 +3,12 @@ import { PlusCircle } from '@phosphor-icons/react';
 import { useState } from 'react';
 import { createTask } from '../../service/api';
 
+
+
+
 export function TaskInput() {
+    
+    //
 
     const [task, setTasks] = useState('');
 
@@ -27,9 +32,8 @@ export function TaskInput() {
         // Passando o objeto newTask como parâmetro
         // Por exemplo: createTask(newTask);
 
-
         createTask(novaTask)
-
+        
         // Limpa o campo de texto
         setTasks('');
     };
@@ -49,6 +53,7 @@ export function TaskInput() {
             <Grid item xl={2} sm={12}>
                 <Button
                     variant="contained"
+                    onClick={handleCreateTask}
                     fullWidth sx={{ height: '100%' }}>
                     <span> Criar </span> <PlusCircle size={32} />
                 </Button>
