@@ -3,6 +3,7 @@ import { useTheme } from '@mui/material/styles';
 import { CheckFat } from '@phosphor-icons/react';
 
 export function HeaderCabecalho() {
+    
     const theme = useTheme();
 
     return (
