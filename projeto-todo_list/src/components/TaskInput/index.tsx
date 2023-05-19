@@ -28,7 +28,7 @@ export function TaskInput() {
         // Por exemplo: createTask(newTask);
 
 
-        createTask()
+        createTask(novaTask)
 
         // Limpa o campo de texto
         setTasks('');

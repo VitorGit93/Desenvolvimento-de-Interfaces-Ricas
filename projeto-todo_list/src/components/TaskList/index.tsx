@@ -1,6 +1,6 @@
 import { useTheme } from '@mui/material/styles';
 import { Tarefa } from '../Tarefa';
-import { Badge, Divider, Grid, Stack, Typography } from '@mui/material';
+import { Badge, Box, Divider, Grid, Stack, Typography } from '@mui/material';
 import { useEffect, useState } from 'react';
 import { getAll } from '../../service/api';
 import { typeTarefa } from '../../types/typeTarefa';
@@ -96,6 +96,9 @@ function TaskList() {
                     }}
                 >
                     {/* Pilha (filha de Grid item) onde ficarão as tasks */}
+
+
+
                     <Stack spacing={2}
                         sx={{
                             display: 'grid',
@@ -104,25 +107,16 @@ function TaskList() {
                         }}
                     >
                         {/* Aqui irá a lista das tasks lançadas */}
-                        
-                        {tasks.map(( task: typeTarefa ) => (
-                            <Tarefa
-                                taskData={task}
-                            />
+
+
+
+                        {tasks.map((task: typeTarefa) => (
+                            <Tarefa taskData={task} />
                         ))}
 
+                    </Stack>
 
-                        {/* <Tarefa
-                            id={1}
-                            titulo="Tarefa 1"
-                            descricao="Descrição da tarefa 1"
-                            dataCriacao="01/01/2021"
-                            status={false}
-                        /> */}
-                           
-                        
-
-                    </Stack> {/* Fim da pilha de tasks */}
+                    {/* Fim da pilha de tasks */}
                 </Grid> {/* Fim do Grid item que representa a lista de tasks */}
 
                 {/* ======================================================================================================= */}
