@@ -12,9 +12,8 @@ function App() {
 
     const [tasks, setTasks] = useState<typeTarefa[]>([]);
 
-    
-
     useEffect(() => {
+        
         const fetchTasks = async () => {
             try {
                 const tarefaDados = await getAll();
@@ -26,6 +25,21 @@ function App() {
         }
         fetchTasks();
     }, []);
+
+
+    // const [tasks, setTasks] = useState<typeTarefa[]>([]);
+
+    // useEffect(() => {
+    //     getAll().then(response => {
+    //         setTasks(response);
+    //     });
+
+    //     getAll().then(response => {
+    //         console.log(response);
+    //         return response;
+    //     });
+
+    // }, []);
 
     return (
         <ThemeProvider theme={darkTheme}>
@@ -41,14 +55,11 @@ function App() {
                     position: 'relative',
                     top: '-27px',
                     //background: 'linear-gradient(to right, #005c97, #363795)'
-                    
                 }}>
 
-                    <TaskInput />
+                    <TaskInput setTask={setTasks}/>
 
-                    <TaskList
-                        tasks={tasks}
-                    />                    
+                    <TaskList tasks={tasks} />                    
 
                 </Container>
 

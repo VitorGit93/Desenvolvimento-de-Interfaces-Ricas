@@ -10,7 +10,9 @@ type TarefaProps = {
 export function Tarefa({taskData}: TarefaProps) {
 
     const theme = useTheme();
+    
     const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
+
 
     return (
         <>
@@ -36,6 +38,7 @@ export function Tarefa({taskData}: TarefaProps) {
                         backgroundColor: '#20252b'
                     }}
                 >
+                    <Checkbox {...label} checked={taskData.status} />
 
                     <CardHeader
                         sx={{
@@ -78,9 +81,6 @@ export function Tarefa({taskData}: TarefaProps) {
                         justifyContent: 'center'
                     }}
                 >
-
-                    <Checkbox {...label} color="success" checked={taskData.status} />
-
                     <Button variant='contained' color="info"
                         sx={{
                             display: 'flex',
