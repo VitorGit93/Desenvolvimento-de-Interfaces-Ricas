@@ -13,7 +13,6 @@ function App() {
     const [tasks, setTasks] = useState<typeTarefa[]>([]);
 
     useEffect(() => {
-        
         const fetchTasks = async () => {
             try {
                 const tarefaDados = await getAll();
@@ -21,25 +20,11 @@ function App() {
             } catch (error) {
                 console.error('Erro ao buscar as tarefas: ', error);
             }
-        
         }
         fetchTasks();
     }, []);
 
-
-    // const [tasks, setTasks] = useState<typeTarefa[]>([]);
-
-    // useEffect(() => {
-    //     getAll().then(response => {
-    //         setTasks(response);
-    //     });
-
-    //     getAll().then(response => {
-    //         console.log(response);
-    //         return response;
-    //     });
-
-    // }, []);
+    
 
     return (
         <ThemeProvider theme={darkTheme}>
