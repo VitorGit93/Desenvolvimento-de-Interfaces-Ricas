@@ -92,6 +92,9 @@ export function Tarefa({taskData}: TarefaProps) {
                     </Button>
 
                     <Button variant='contained' color="error"
+
+                        // onClick={() => setIsOpen(true)}
+
                         sx={{
                             display: 'flex',
                             alignItems: 'center',
