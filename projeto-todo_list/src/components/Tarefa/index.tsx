@@ -26,7 +26,6 @@ export function Tarefa({ taskData }: TarefaProps) {
                 sx={{
                     display: 'flex',
                     alignItems: 'center',
-                    gap: theme.spacing(),
                     justifyContent: 'space-between',
                     border: '1px solid #3d4b6c',
                     backgroundColor: '#20252b',
@@ -37,16 +36,21 @@ export function Tarefa({ taskData }: TarefaProps) {
                     sx={{
                         display: 'flex',
                         alignItems: 'space-between',
+                        justifyContent: 'center',
                         gap: theme.spacing(1),
                         border: '1px solid #3d4b6c',
-                        backgroundColor: '#20252b'
+                        backgroundColor: '#22022b',
                     }}
                 >
                     <Checkbox
                         checked={checked}
                         onChange={handleChange}
                         sx={{
+
                             color: checked ? green[500] : "#f55fff",
+                            '&.Mui-checked': {
+                                color: green[500],
+                            }
                         }}
                     />
 
@@ -58,7 +62,7 @@ export function Tarefa({ taskData }: TarefaProps) {
                             ...titleStyle // Aplica o estilo de título riscado condicionalmente
                         }}
                         title={
-                            <Typography variant='h6' sx={{ fontFamily: 'Consolas, monospace', color: '#f55fff' }}>
+                            <Typography sx={{ fontFamily: 'Poppins,  sans-serif'}}>
                                 {taskData.titulo}
                             </Typography>
                         }

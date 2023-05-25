@@ -17,12 +17,11 @@ function TaskList({tasks}: TaskListProps) {
                 spacing={theme.spacing(1)}
                 sx={{
                     display: 'grid',
-                    marginTop: '25px',
-                    border: '1px solid #3d4b5c',
-                    borderRadius: '4px',
-                    padding: '10px',
-                    gap: theme.spacing(1),
-                    backgroundColor: '#20252b'
+                    marginTop: '10px',
+                    borderRadius: '5px',
+                    padding: '2px',
+                    gap: theme.spacing(0),
+                    backgroundColor: '#20252b',
                 }}
             >
                 {/* Grid item que representa o "Header da lista" */}
@@ -31,10 +30,7 @@ function TaskList({tasks}: TaskListProps) {
                     sx={{
                         display: 'flex',
                         alignItems: 'center',
-                        gap: theme.spacing(2),
                         justifyContent: 'space-between',
-                        border: '1px solid #3d4b6c',
-                        backgroundColor: '#20253b'
                     }}
                 >
                     <Typography variant='caption'
@@ -72,17 +68,12 @@ function TaskList({tasks}: TaskListProps) {
                     sx={{
                         display: 'flex',
                         alignItems: 'center',
-                        padding: '5px',
-                        gap: theme.spacing(2),
                         justifyContent: 'space-between',
-                        border: '1px solid #3d4b6c',
-                        backgroundColor: '#85283b',
-
+                        borderRadius: '5px',
+                        backgroundColor: '#20252b',
                     }}
                 >
                     {/* Pilha (filha de Grid item) onde ficarão as tasks */}
-
-
 
                     <Stack spacing={2}
                         sx={{
@@ -92,9 +83,6 @@ function TaskList({tasks}: TaskListProps) {
                         }}
                     >
                         {/* Aqui irá a lista das tasks lançadas */}
-
-
-
                         {tasks?.map((task: typeTarefa) => (
                             <Tarefa taskData={task} />
                         ))}
