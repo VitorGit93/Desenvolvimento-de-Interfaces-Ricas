@@ -7,32 +7,26 @@ export const api = axios.create({
 });
 
 export async function getAll() {
-  const tarefa = await api.get("tarefa");
-  return tarefa.data;
-}
-export async function getById(id: number) {
-  const tarefa = await api.get(`tarefa/${id}`);
-  return tarefa.data;
-}
-export async function save(tarefa: typeTarefa) {
-  const response = await api.post(`tarefa`, { ...tarefa });
+  const response = await api.get<typeTarefa[]>("tarefa"); // Adição do tipo de retorno da requisição
   return response.data;
-}
-export async function update(tarefa: typeTarefa) {
-  const response = await api.put(`tarefa/${tarefa.id}`, { ...tarefa });
-  return response.data;
-}
-export async function exclude(id: number) {
-  const tarefa = await api.delete(`tarefa/${id}`);
-  return tarefa.data;
 }
 
-export async function createTask(tarefa: typeTarefa) {
-  try {
-    const response = await api.post('/tarefa', tarefa);
-    return response.data;
-  } catch(error) {
-    console.error('Erro ao criar a tarefa: ', error);
-    throw error;
-  }
+export async function getById(id: number) {
+  const response = await api.get<typeTarefa>(`tarefa/${id}`); // Adição do tipo de retorno da requisição
+  return response.data;
+}
+
+export async function save(tarefa: typeTarefa) {
+  const response = await api.post<typeTarefa>("tarefa", { ...tarefa }); // Adição do tipo de retorno da requisição
+  return response.data;
+}
+
+export async function update(tarefa: typeTarefa) {
+  const response = await api.put<typeTarefa>(`tarefa/${tarefa.id}`, { ...tarefa }); // Adição do tipo de retorno da requisição
+  return response.data;
+}
+
+export async function exclude(id: number) {
+  const response = await api.delete<typeTarefa>(`tarefa/${id}`); // Adição do tipo de retorno da requisição
+  return response.data;
 }
