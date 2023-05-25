@@ -1,5 +1,5 @@
 import { Container, CssBaseline, ThemeProvider } from '@mui/material';
-import { darkTheme } from './Themes';
+import { darkTheme } from './theme';
 import { HeaderCabecalho } from './components/HeaderCabecalho';
 import { TaskInput } from './components/TaskInput';
 import TaskList from './components/TaskList';

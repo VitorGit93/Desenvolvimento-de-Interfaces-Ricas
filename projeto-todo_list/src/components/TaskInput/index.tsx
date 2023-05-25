@@ -5,6 +5,7 @@ import { save } from '../../service/api';
 import { typeTarefa } from '../../types/typeTarefa';
 
 type TaskInputProps = {
+    // eslint-disable-next-line @typescript-eslint/ban-types
     setTask: Function;
 };
 
