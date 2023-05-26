@@ -3,6 +3,7 @@ import { Pencil, Trash } from "@phosphor-icons/react";
 import { typeTarefa } from "../../types/typeTarefa";
 import { useState } from "react";
 import { green } from "@mui/material/colors";
+import { exclude } from "../../service/api";
 
 type TarefaProps = {
     taskData: typeTarefa;
@@ -17,6 +18,8 @@ export function Tarefa({ taskData }: TarefaProps) {
         setChecked(event.target.checked);
     };
 
+    
+    
     const titleStyle = checked ? { textDecoration: 'line-through' } : {}; // Estilo de título riscado
 
     return (
@@ -35,6 +38,7 @@ export function Tarefa({ taskData }: TarefaProps) {
                 <CardContent
                     sx={{
                         display: 'flex',
+                        padding: theme.spacing(1),
                         alignItems: 'space-between',
                         justifyContent: 'center',
                         gap: theme.spacing(1),
@@ -46,14 +50,12 @@ export function Tarefa({ taskData }: TarefaProps) {
                         checked={checked}
                         onChange={handleChange}
                         sx={{
-
                             color: checked ? green[500] : "#f55fff",
                             '&.Mui-checked': {
                                 color: green[500],
                             }
                         }}
                     />
-
 
                     <CardHeader
                         sx={{
@@ -128,3 +130,5 @@ export function Tarefa({ taskData }: TarefaProps) {
         </>
     )
 }
+
+
