@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Pokedex</title>
+        <link rel="stylesheet" href="css/style.css" />
+        <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    </head>
+    <body>
+        <header class="hero-section">
+            <div class="hero-section__content">
+                <img
+                    src="img/logo-pokemon.svg"
+                    alt="Logo Pokémon"
+                    class="hero-section__pokemon-logo"
+                />
+                <div class="hero-section__text">
+                    <h1 class="hero-section__headline">
+                        Explore o mundo dos Pokémons
+                    </h1>
+                    <h2 class="hero-section__subtitle">
+                        A Pokedex para treinadores de elite!
+                    </h2>
+                </div>
+                <img
+                    src="img/hero-pokeball.png"
+                    alt="Pikachu"
+                    class="hero-section__pokeball"
+                />
+            </div>
+        </header>
+        <main class="container">
+            <section class="search-section">
+                <h2 class="search-section__title">Encontre seu Pokémon:</h2>
+
+                <div class="input-wrapper">
+                    <input
+                        type="text"
+                        class="search-section__input"
+                        placeholder="Digite o nome ou número do Pokémon"
+                    />
+                    <button class="search-section__button">
+                        <i class="ph ph-magnifying-glass"></i>
+                    </button>
+                </div>
+            </section>
+            <section class="content">
+                <div class="content__sidebar">
+                    <ul class="sidebar__filter">
+                        <li>
+                            <button>
+                                <img src="img/types/all.svg" />todos
+                            </button>
+                        </li>
+                        <li>
+                            <button><img src="img/types/bug.svg" />bug</button>
+                        </li>
+                        <li>
+                            <button>
+                                <img src="img/types/dark.svg" />dark
+                            </button>
+                        </li>
+                        <li>
+                            <button>
+                                <img src="img/types/dragon.svg" />dragon
+                            </button>
+                        </li>
+
+                        <li>
+                            <button>
+                                <img src="img/types/electric.svg" />electric
+                            </button>
+                        </li>
+                        <li>
+                            <button>
+                                <img src="img/types/fairy.svg" />fairy
+                            </button>
+                        </li>
+                        <li>
+                            <button>
+                                <img src="img/types/fighting.svg" />fighting
+                            </button>
+                        </li>
+                        <li>
+                            <button>
+                                <img src="img/types/fire.svg" />fire
+                            </button>
+                        </li>
+                        <li>
+                            <button>
+                                <img src="img/types/flying.svg" />flying
+                            </button>
+                        </li>
+                        <li>
+                            <button>
+                                <img src="img/types/ghost.svg" />ghost
+                            </button>
+                        </li>
+                        <li>
+                            <button>
+                                <img src="img/types/grass.svg" />grass
+                            </button>
+                        </li>
+                        <li>
+                            <button>
+                                <img src="img/types/ground.svg" />ground
+                            </button>
+                        </li>
+                        <li>
+                            <button><img src="img/types/ice.svg" />ice</button>
+                        </li>
+                        <li>
+                            <button>
+                                <img src="img/types/normal.svg" />normal
+                            </button>
+                        </li>
+                        <li>
+                            <button>
+                                <img src="img/types/poison.svg" />poison
+                            </button>
+                        </li>
+                        <li>
+                            <button>
+                                <img src="img/types/psychic.svg" />psychic
+                            </button>
+                        </li>
+                        <li>
+                            <button>
+                                <img src="img/types/rock.svg" />rock
+                            </button>
+                        </li>
+                        <li>
+                            <button>
+                                <img src="img/types/steel.svg" />steel
+                            </button>
+                        </li>
+                        <li>
+                            <button>
+                                <img src="img/types/water.svg" />water
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+                <div class="content__card-list">
+                    <section class="cards">
+                        <div class="card type__fire">
+                            <div class="card__header">
+                                <span>Charmander</span>
+                                <span>#04</span>
+                            </div>
+                            <div class="card__content">
+                                <img
+                                    class="pokemon__image"
+                                    src="img/pokemons/4.svg"
+                                />
+                            </div>
+                            <div class="card__footer">
+                                <span class="card__badge type__fire">
+                                    <img src="img/types/fire.svg" />
+                                    Fire
+                                </span>
+                            </div>
+                        </div>
+                        <div class="card type__bug">
+                            <div class="card__header">
+                                <span>Metapod</span>
+                                <span>#11</span>
+                            </div>
+                            <div class="card__content">
+                                <img
+                                    class="pokemon__image"
+                                    src="img/pokemons/11.svg"
+                                />
+                            </div>
+                            <div class="card__footer">
+                                <span class="card__badge type__bug">
+                                    <img src="img/types/bug.svg" />
+                                    bug
+                                </span>
+                            </div>
+                        </div>
+                        <div class="card type__electric">
+                            <div class="card__header">
+                                <span>Pikachu</span>
+                                <span>#25</span>
+                            </div>
+                            <div class="card__content">
+                                <img
+                                    class="pokemon__image"
+                                    src="img/pokemons/25.svg"
+                                />
+                            </div>
+                            <div class="card__footer">
+                                <span class="card__badge type__electric">
+                                    <img src="img/types/electric.svg" />
+                                    electric
+                                </span>
+                            </div>
+                        </div>
+                        <div class="card type__dark">
+                            <div class="card__header">
+                                <span>Houndour</span>
+                                <span>#228</span>
+                            </div>
+                            <div class="card__content">
+                                <img
+                                    class="pokemon__image"
+                                    src="img/pokemons/228.svg"
+                                />
+                            </div>
+                            <div class="card__footer">
+                                <span class="card__badge type__dark">
+                                    <img src="img/types/dark.svg" />
+                                    dark
+                                </span>
+                            </div>
+                        </div>
+                        <div class="card type__dragon">
+                            <div class="card__header">
+                                <span>Dragonite</span>
+                                <span>#149</span>
+                            </div>
+                            <div class="card__content">
+                                <img
+                                    class="pokemon__image"
+                                    src="img/pokemons/149.svg"
+                                />
+                            </div>
+                            <div class="card__footer">
+                                <span class="card__badge type__dragon">
+                                    <img src="img/types/dragon.svg" />
+                                    dragon
+                                </span>
+                            </div>
+                        </div>
+                        <div class="card type__ice-flying">
+                            <div class="card__header">
+                                <span>Articuno</span>
+                                <span>#144</span>
+                            </div>
+                            <div class="card__content">
+                                <img
+                                    class="pokemon__image"
+                                    src="img/pokemons/144.svg"
+                                />
+                            </div>
+                            <div class="card__footer">
+                                <span class="card__badge type__ice">
+                                    <img src="img/types/ice.svg" />
+                                    ice
+                                </span>
+                                <span class="card__badge type__flying">
+                                    <img src="img/types/flying.svg" />
+                                    flying
+                                </span>
+                            </div>
+                        </div>
+                        <div class="card type__bug-poison">
+                            <div class="card__header">
+                                <span>Weedle</span>
+                                <span>#13</span>
+                            </div>
+                            <div class="card__content">
+                                <img
+                                    class="pokemon__image"
+                                    src="img/pokemons/13.svg"
+                                />
+                            </div>
+                            <div class="card__footer">
+                                <span class="card__badge type__bug">
+                                    <img src="img/types/bug.svg" />
+                                    bug
+                                </span>
+                                <span class="card__badge type__poison">
+                                    <img src="img/types/poison.svg" />
+                                    poison
+                                </span>
+                            </div>
+                        </div>
+                        <div class="card type__fire">
+                            <div class="card__header">
+                                <span>Charmander</span>
+                                <span>#04</span>
+                            </div>
+                            <div class="card__content">
+                                <img
+                                    class="pokemon__image"
+                                    src="img/pokemons/4.svg"
+                                />
+                            </div>
+                            <div class="card__footer">
+                                <span class="card__badge type__fire">
+                                    <img src="img/types/fire.svg" />
+                                    Fire
+                                </span>
+                            </div>
+                        </div>
+                        <div class="card type__bug">
+                            <div class="card__header">
+                                <span>Metapod</span>
+                                <span>#11</span>
+                            </div>
+                            <div class="card__content">
+                                <img
+                                    class="pokemon__image"
+                                    src="img/pokemons/11.svg"
+                                />
+                            </div>
+                            <div class="card__footer">
+                                <span class="card__badge type__bug">
+                                    <img src="img/types/bug.svg" />
+                                    bug
+                                </span>
+                            </div>
+                        </div>
+                        <div class="card type__electric">
+                            <div class="card__header">
+                                <span>Pikachu</span>
+                                <span>#25</span>
+                            </div>
+                            <div class="card__content">
+                                <img
+                                    class="pokemon__image"
+                                    src="img/pokemons/25.svg"
+                                />
+                            </div>
+                            <div class="card__footer">
+                                <span class="card__badge type__electric">
+                                    <img src="img/types/electric.svg" />
+                                    electric
+                                </span>
+                            </div>
+                        </div>
+                        <div class="card type__dark">
+                            <div class="card__header">
+                                <span>Houndour</span>
+                                <span>#228</span>
+                            </div>
+                            <div class="card__content">
+                                <img
+                                    class="pokemon__image"
+                                    src="img/pokemons/228.svg"
+                                />
+                            </div>
+                            <div class="card__footer">
+                                <span class="card__badge type__dark">
+                                    <img src="img/types/dark.svg" />
+                                    dark
+                                </span>
+                            </div>
+                        </div>
+                        <div class="card type__dragon">
+                            <div class="card__header">
+                                <span>Dragonite</span>
+                                <span>#149</span>
+                            </div>
+                            <div class="card__content">
+                                <img
+                                    class="pokemon__image"
+                                    src="img/pokemons/149.svg"
+                                />
+                            </div>
+                            <div class="card__footer">
+                                <span class="card__badge type__dragon">
+                                    <img src="img/types/dragon.svg" />
+                                    dragon
+                                </span>
+                            </div>
+                        </div>
+                        <div class="card type__ice-flying">
+                            <div class="card__header">
+                                <span>Articuno</span>
+                                <span>#144</span>
+                            </div>
+                            <div class="card__content">
+                                <img
+                                    class="pokemon__image"
+                                    src="img/pokemons/144.svg"
+                                />
+                            </div>
+                            <div class="card__footer">
+                                <span class="card__badge type__ice">
+                                    <img src="img/types/ice.svg" />
+                                    ice
+                                </span>
+                                <span class="card__badge type__flying">
+                                    <img src="img/types/flying.svg" />
+                                    flying
+                                </span>
+                            </div>
+                        </div>
+                        <div class="card type__bug-poison">
+                            <div class="card__header">
+                                <span>Weedle</span>
+                                <span>#13</span>
+                            </div>
+                            <div class="card__content">
+                                <img
+                                    class="pokemon__image"
+                                    src="img/pokemons/13.svg"
+                                />
+                            </div>
+                            <div class="card__footer">
+                                <span class="card__badge type__bug">
+                                    <img src="img/types/bug.svg" />
+                                    bug
+                                </span>
+                                <span class="card__badge type__poison">
+                                    <img src="img/types/poison.svg" />
+                                    poison
+                                </span>
+                            </div>
+                        </div>
+                        <div class="card type__fire">
+                            <div class="card__header">
+                                <span>Charmander</span>
+                                <span>#04</span>
+                            </div>
+                            <div class="card__content">
+                                <img
+                                    class="pokemon__image"
+                                    src="img/pokemons/4.svg"
+                                />
+                            </div>
+                            <div class="card__footer">
+                                <span class="card__badge type__fire">
+                                    <img src="img/types/fire.svg" />
+                                    Fire
+                                </span>
+                            </div>
+                        </div>
+                        <div class="card type__bug">
+                            <div class="card__header">
+                                <span>Metapod</span>
+                                <span>#11</span>
+                            </div>
+                            <div class="card__content">
+                                <img
+                                    class="pokemon__image"
+                                    src="img/pokemons/11.svg"
+                                />
+                            </div>
+                            <div class="card__footer">
+                                <span class="card__badge type__bug">
+                                    <img src="img/types/bug.svg" />
+                                    bug
+                                </span>
+                            </div>
+                        </div>
+                        <div class="card type__electric">
+                            <div class="card__header">
+                                <span>Pikachu</span>
+                                <span>#25</span>
+                            </div>
+                            <div class="card__content">
+                                <img
+                                    class="pokemon__image"
+                                    src="img/pokemons/25.svg"
+                                />
+                            </div>
+                            <div class="card__footer">
+                                <span class="card__badge type__electric">
+                                    <img src="img/types/electric.svg" />
+                                    electric
+                                </span>
+                            </div>
+                        </div>
+                        <div class="card type__dark">
+                            <div class="card__header">
+                                <span>Houndour</span>
+                                <span>#228</span>
+                            </div>
+                            <div class="card__content">
+                                <img
+                                    class="pokemon__image"
+                                    src="img/pokemons/228.svg"
+                                />
+                            </div>
+                            <div class="card__footer">
+                                <span class="card__badge type__dark">
+                                    <img src="img/types/dark.svg" />
+                                    dark
+                                </span>
+                            </div>
+                        </div>
+                        <div class="card type__dragon">
+                            <div class="card__header">
+                                <span>Dragonite</span>
+                                <span>#149</span>
+                            </div>
+                            <div class="card__content">
+                                <img
+                                    class="pokemon__image"
+                                    src="img/pokemons/149.svg"
+                                />
+                            </div>
+                            <div class="card__footer">
+                                <span class="card__badge type__dragon">
+                                    <img src="img/types/dragon.svg" />
+                                    dragon
+                                </span>
+                            </div>
+                        </div>
+                        <div class="card type__ice-flying">
+                            <div class="card__header">
+                                <span>Articuno</span>
+                                <span>#144</span>
+                            </div>
+                            <div class="card__content">
+                                <img
+                                    class="pokemon__image"
+                                    src="img/pokemons/144.svg"
+                                />
+                            </div>
+                            <div class="card__footer">
+                                <span class="card__badge type__ice">
+                                    <img src="img/types/ice.svg" />
+                                    ice
+                                </span>
+                                <span class="card__badge type__flying">
+                                    <img src="img/types/flying.svg" />
+                                    flying
+                                </span>
+                            </div>
+                        </div>
+                        <div class="card type__bug-poison">
+                            <div class="card__header">
+                                <span>Weedle</span>
+                                <span>#13</span>
+                            </div>
+                            <div class="card__content">
+                                <img
+                                    class="pokemon__image"
+                                    src="img/pokemons/13.svg"
+                                />
+                            </div>
+                            <div class="card__footer">
+                                <span class="card__badge type__bug">
+                                    <img src="img/types/bug.svg" />
+                                    bug
+                                </span>
+                                <span class="card__badge type__poison">
+                                    <img src="img/types/poison.svg" />
+                                    poison
+                                </span>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </section>
+            <footer></footer>
+        </main>
+    </body>
+</html>
